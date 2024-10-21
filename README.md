@@ -6,13 +6,13 @@ This repository contains a Python script that automates the downloading of games
 ## Features
 - Automates the download process for games divided into multiple parts.
 - Configurable parameters for wait times and number of parallel downloads.
-- Supports easy adaptation for various game download sites.
+- Supports easy adaptation for similar game download sites.
 
 ## Requirements
 - Python 3.x
 - Selenium library
 - Chrome WebDriver
-- Internet Download Manager (IDM) installed with the browser extension
+- Any download manager with the browser extension
 
 ## Setup
 1. **Install Python**: Ensure Python 3.x is installed on your system.
@@ -20,8 +20,10 @@ This repository contains a Python script that automates the downloading of games
    ```bash
    pip install selenium
 3. **Download Chrome WebDriver**: Make sure to have the Chrome WebDriver that matches your Chrome version.
-4. **Set up IDM**: Install Internet Download Manager and enable the IDM extension for Chrome.
-5. **Update the Script**: Modify the idm_extension_path variable in the script to point to the location of the IDM extension on your machine.
+
+### Optional
+4. **Set up your downloader manager**: Install a Download Manager and enable the IDM extension for Chrome.
+5. **Update the Script**: Modify the EXTENSION_PATH constant in the script to point to the location of the extension on your machine.
 
 
 ## Important Notes
