@@ -13,7 +13,7 @@ PAUSE = 180  # Duration to pause (in seconds)
 # Set up Chrome options and add the IDM extension
 chrome_options = Options()
 chrome_options.add_extension(EXTENSION_PATH)
-chrome_options.headless = True
+chrome_options.add_argument("--headless")
 
 # Initialize the Chrome WebDriver with the specified options
 driver = webdriver.Chrome(options=chrome_options)
