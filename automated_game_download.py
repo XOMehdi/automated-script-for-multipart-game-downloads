@@ -13,6 +13,7 @@ PAUSE = 180  # Duration to pause (in seconds)
 # Set up Chrome options and add the IDM extension
 chrome_options = Options()
 chrome_options.add_extension(EXTENSION_PATH)
+chrome_options.headless = True
 
 # Initialize the Chrome WebDriver with the specified options
 driver = webdriver.Chrome(options=chrome_options)
@@ -38,15 +39,14 @@ try:
     try:
         # Wait until all part links are present and gather their href attributes
         links = WebDriverWait(driver, WAIT).until(
-            EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.su-spoiler-content a'))
+            EC.presence_of_all_elements_located((By.XPATH, '//div[contains(@class, "su-spoiler-content") and not(ancestor::div[contains(@class, "su-spoiler-closed")])]//a'))
         )
         part_links = [link.get_attribute('href') for link in links]  # Extract the URLs of all parts
-
+    
     except Exception as e:
         print(f"Error retrieving part links: {e}")
         driver.quit()  # Exit if unable to retrieve links
         exit()  # Stop further execution
-
 
     # Iterate through each part link to initiate the download
     for count, part_link in enumerate(part_links, start=0):
