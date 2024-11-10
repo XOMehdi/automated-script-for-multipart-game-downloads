@@ -22,8 +22,8 @@ This repository contains a Python script that automates the downloading of games
 3. **Download Chrome WebDriver**: Make sure to have the Chrome WebDriver that matches your Chrome version.
 
 ### Optional
-4. **Set up your downloader manager**: Install a Download Manager and enable the IDM extension for Chrome.
-5. **Update the Script**: Modify the EXTENSION_PATH constant in the script to point to the location of the extension on your machine.
+4. **Set up your downloader manager**: Install a Download Manager and enable the downloader's extension for Chrome.
+5. **Update the Script**: Modify the EXTENSION_PATH constant in the script to point to the location of the extension on your PC.
 
 
 ## Important Notes
